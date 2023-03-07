@@ -2,14 +2,11 @@ const http = require("http");
 const express = require("express");
 const app = express();
 const bodyparser = require("body-parser");
+const misRutas = require("./router/index");
 
 app.use(express.static(__dirname+'/public'))
-
-app.get('/',(req,res)=>{
-    // res.send("<h1>Iniciamos con express</h1>")
-    res.render('examen.ejs')
- });
-
+app.use(bodyparser.urlencoded({extended:true}));
+app.use(misRutas)
 
 // Página de error
 app.use((req,res,next)=>{res.status(404).sendFile(__dirname+'/public/error.html')})
