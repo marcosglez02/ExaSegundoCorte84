@@ -4,20 +4,20 @@
         <form action="/" method="post">
             <div class="row mb-4">
                 <div class="col-3"><label for="" class="form-label">Número recibo</label></div>
-                <div class="col"><input type="number" class="form-control"></div>
+                <div class="col"><input type="number" class="form-control" id="numRecibo" name="numRecibo"></div>
             </div>
             <div class="row mb-4">
                 <div class="col-3"><label for="" class="form-label">Nombre</label></div>
-                <div class="col"><input type="text" class="form-control"></div>
+                <div class="col"><input type="text" class="form-control" id="nombre" name="nombre"></div>
             </div>
             <div class="row mb-4">
                 <div class="col-3"><label for="" class="form-label">Domicilio</label></div>
-                <div class="col"><input type="text" class="form-control"></div>
+                <div class="col"><input type="text" class="form-control" id="domicilio" name="domicilio"></div>
             </div>
             <div class="row mb-4">
                 <div class="col-3"><label for="" class="form-label">Tipo de servicio</label></div>
                 <div class="col">
-                    <select class="form-select" name="plazos" id="plazos">
+                    <select class="form-select" id="tipo" name="tipo">
                         <option value="1">Domicilio</option>
                         <option value="2">Comercial</option>
                         <option value="3">Industrial</option>
@@ -26,7 +26,7 @@
             </div>
             <div class="row mb-4">
                 <div class="col-3"><label for="" class="form-label">Kilowats consumidos</label></div>
-                <div class="col"><input type="number" class="form-control"></div>
+                <div class="col"><input type="number" class="form-control" name="kilowats" id="kilowats"></div>
             </div>
             <div class="row">
                 <div class="d-grid gap-2 col-5 mx-auto">
