@@ -3,7 +3,10 @@ const express = require("express");
 const app = express();
 const bodyparser = require("body-parser");
 const misRutas = require("./router/index");
+const path = require("path");
 
+app.set("view engine","ejs");
+app.engine('html',require('ejs').renderFile);
 app.use(express.static(__dirname+'/public'))
 app.use(bodyparser.urlencoded({extended:true}));
 app.use(misRutas)
